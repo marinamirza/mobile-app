@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: #333;
+
+    /* --font-size: 20px; */
 }
 ul {
     list-style: none;
@@ -24,30 +26,28 @@ h2,p {
 }
 /* Chat app styles */
 .app {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: #444;
 }
 .app header,
 .app footer {
     background-color: #123;
-    height: 8%;
+    height: 8vh;
 }
 .app main {
     background-color: #345;
-    height: 84%;
+    height: 84vh;
     overflow-y: scroll;
 
     position: relative;
 
 }
 /* contacts */
-.contacts {
-    
-}
 .contacts__profile {
-    height: 5em;
+    height: 8vh;
     padding: 0.5em;
+    border-bottom: 1px solid;
 }
 .contacts__profile *{
     display: inline-block;
@@ -60,8 +60,10 @@ h2,p {
     margin-inline-start: 0;
     margin-inline-end: 0;
 
-    height: 5em;
+    height: 8vh;
     width: 5em;
+    /* width: calc(var(--font-size) * 4);
+    height: ;: calc(var(--font-size) * 4); */
 
     background-color: #567;
     border-radius: 100%;
@@ -119,11 +121,11 @@ h2,p {
 
     position: absolute;
     right: 1em;
-    margin-top: 1.5em;
+    margin-top: 2vh;
     color: #AAA;
 }
 
-/* .message__status::after {
+.message__status::after {
     content: "";
     color: #AAA;
 
@@ -132,16 +134,55 @@ h2,p {
 
     display: block;
 } 
-.message--sent .message__status::after {
+.message--sent.message__status::after {
     content: "✓";
     display: block; 
 }
-.message--deliver .message__status::after {
+.message--deliver.message__status::after {
     content: "✓✓";
     display: block; 
 }
-.message--seen .message__status::after {
+.message--seen.message__status::after {
     content: "✓✓";
     display: block;
     color: green;
-} */
+}
+/* Landskape version */
+
+/* HW portrait 7 / landscape 3 */
+
+@media  (orientation: portrait) and (min-height:600px){
+    .app .contacts__profile {
+        height: 11vh;
+        margin-top: 1vh;
+        padding: 0;
+    }
+  }
+@media (orientation: landscape) and (min-height:300px) and (max-height:900px) and (min-width: 900px){
+
+    body {
+        font-size: 23px;
+    }
+    .contacts .contacts__profile {
+        height: 24vh;
+        margin-top: 1vh;
+        
+    }
+    .contacts__avatar {
+        margin-left: 2em;
+        margin-top: 2vh;
+        height: 14vh;
+        width: 5.5em;
+
+    }
+    .contacts__avatar img {
+        width: 100%;
+    }
+    .message__content{
+        margin-left: 1.5em;
+    }
+    .message__status {
+        margin-right: 2em;
+    }
+   
+}
