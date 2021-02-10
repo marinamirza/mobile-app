@@ -5,6 +5,7 @@
     <meta name="viewport" 
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Chat App Layout</title>
+    
     <link rel="stylesheet" href="app.css">
 </head>
 <!-- CSS units (vmin, vmax, variables (color pallete), dark&light) -->
@@ -22,15 +23,22 @@
             <main>
                 <ul class="contacts">
                     <li class="contacts__profile status--online">
-                        <figure class="contacts__avatar">
-                            <img src="images/avatar1.png" alt="RedHair DontCare">
-                        </figure>
-                        <div class="message__content">
-                            <h2>RedHair DontCare</h2>
-                            <br>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                        <div class="profile__slide">
+                            <figure class="contacts__avatar">
+                                <img src="images/avatar1.png" alt="RedHair DontCare">
+                            </figure>
+                            <div class="message__content">
+                                <h2>RedHair DontCare</h2>
+                                <br>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <span class="message__status message--sent"> 9:30</span>
+                            <div class="profile__actions">
+                                <button>+</button>
+                                <button>-</button>
+                            </div>
                         </div>
-                        <span class="message__status message--sent"> 9:30</span>
+                        
                     </li>
                     <li class="contacts__profile status--offline">
                         <figure class="contacts__avatar">

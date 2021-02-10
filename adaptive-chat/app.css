@@ -44,10 +44,19 @@ h2,p {
 
 }
 /* contacts */
+.profile__slide {
+    width: 140%;
+    height: 100%;
+    /* scroll-snap-align: start; */
+}
 .contacts__profile {
     height: 8vh;
     padding: 0.5em;
     border-bottom: 1px solid;
+    width: 100%;
+    overflow-x: auto;
+
+    /* scroll-snap-type: x mandatory; */
 }
 .contacts__profile *{
     display: inline-block;
@@ -147,11 +156,29 @@ h2,p {
     display: block;
     color: green;
 }
+.profile__actions {
+    height: 100%;
+    width: 40%;
+    background-color: #345;
+    text-align: center;
+
+    position: relative;
+    margin-top: 0;
+    top: 0;
+    left: 65vw;
+/* scroll-snap-align: end; */
+    
+}
+.profile__actions button{
+    height: 100%;
+    width: 40%;
+    color: #345;
+}
 /* Landskape version */
 
 /* HW portrait 7 / landscape 3 */
 
-@media  (orientation: portrait) and (min-height:600px){
+@media  (orientation: portrait) and (min-height:600px) and (min-width:600px){
     .app .contacts__profile {
         height: 11vh;
         margin-top: 1vh;
@@ -165,8 +192,7 @@ h2,p {
     }
     .contacts .contacts__profile {
         height: 24vh;
-        margin-top: 1vh;
-        
+        margin-top: 1vh;  
     }
     .contacts__avatar {
         margin-left: 2em;
